@@ -13,11 +13,13 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique : true,
     validate: [validator.isEmail, "Please provide a valid email!"],
   },
   phone: {
     type: Number,
     required: true,
+    unique : true,
   },
   avatar: {
     public_id: {
